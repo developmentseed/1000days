@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>MIX | Microfinance in Africa</title>
+  <title>1,000 Days Project Map</title>
   <link rel="shortcut icon" href="images/mixmarket_favicon.ico" type="image/x-icon" />
   
    <script src='scripts/jquery-1.6.1.min.js' type='text/javascript'></script>
@@ -20,76 +20,57 @@
 </head>
 
 <body>
-  <div class="top">
-  </div>
-  <div class='header'>
-    <div style="float:left;"><a href='http://www.themix.org' class='logoL'>Microfinance Information eXchange</a></div>
-  </div>
-  
   <div class='about'>
-      <h2>Microfinance in Africa</h2>
-      <p>View the distribution of institutions that provide financial services to the poor throughout Africa in the context of social and economic factors, by country.</p>
-	   <p class='more'>
-	   		&nbsp;&nbsp;&raquo; <a href="http://www.themix.org/publications/mix-microfinance-world/2011/09/africa-financial-inclusion">Read analysis and background information on this data</a>
-	   </p>
-	   <p class='more'>
-	   		&nbsp;&nbsp;&raquo; <a href="http://www.mixmarket.org/mfi/region/Africa">Learn more about microfinance institutions in Africa</a>
-	   </p>
-	   <p class='more detaildata'>
-	   		&nbsp;&nbsp;&raquo; <a href="http://www.google.com/fusiontables/DataSource?snapid=S259127YcIb">Access detailed data</a>
-	   </p>
-      <div class="layerswitch">
-      	<div class="data-switch">
-          <label for="data-select">Select Data:</label>
-          <select id="data-select">
-            <option id="mix-africa-accounts">Total Accounts</option>
-            <option id="mix-africa-providers">Total Providers</option>
-          </select>
-          <div class="datalinkR">
-          	<a href="data/mix-landscape-in-africa.csv" title="Download CSV formatted data">CSV</a>
-          </div>
-          <div class="datalinkL">	
-          	<a href="data/mix-landscape-in-africa.geojson" title="Download GeoJSON formatted data">GeoJSON</a>
-          </div>
-        </div>
-        <ul class="layers">
-	        <li><a id="mix-africa-gdp" href="#">Exclusive Breastfeeding Percentage</a></li>
-	        <li><a id="mix-africa-labor" href="#">Labor Participation</a></li>
-	        <li><a id="mix-africa-literacy" href="#">Literacy Rate</a></li>
-	        <li><a id="mix-africa-mobile" href="#">Mobile Penetration</a></li>
-	        <li><a id="mix-africa-internet" href="#">Internet Users</a></li>
-	       
-        </ul>
-     </div>
-      <div class="partners">
-        <div class="partL">
-          <span class="projectof">A project of:&nbsp;&nbsp;&nbsp;</span><br />
-	     </div>
-	     <div class="partimg">
-	       <a href="http://www.mixmarket.org" target="_blank"><img src="images/logo_mix_bw2.png" alt="MIX" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.developmentseed.org"><img src="images/logo_ds_bw2.png" alt="development seed" /></a>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.mastercardfdn.org"><img src="images/logo_mcf_bw.jpg" alt="mcf" /></a>
-	     </div>
-      </div>
-      <div class="tmlink">
-        powered by open source <a target='_blank' href='http://tilemill.com'>TileMill</a>
-      </div>
-  </div>
-  
-  <div id='map'>
-  </div>
-  
-  <div id='controls'>
-    <a href='#' id='bwtoggle' class='hq control active'>HQ</a>
-    <div id='embed'>
-      <a href='#' class='embed control'></a>
-      <div class='tip'>
-        <div class='inner'>
-          <input type='textfield' length='20' class='embed' id='embed-code' value='' readonly>
-          <p>Copy the code above into any blog or web page to embed this view of the map.</p>
-        </div>
-        <span class='point'></span>
-      </div>
-    </div>
-  </div>
+    <h2>Nutrition Interventions</h2>
+      <p>View the distribution of organizations and projects working to end undernutrition in the context of social and economic factors.</p>
+	     </p>
+		 <div class="layerswitch">
+			<div class="data-switch">
+	          <label for="data-select">View by:</label>
+	          <select id="data-select">
+	            <option id="projects_orgs">Both</option>
+	            <option id="a_projects">Projects</option>
+	            <option id="a_orgs">Organizations</option>
+	          </select>
+	          
+	        </div>
+	        <ul class="layers">
+		        <li><a id="a_socioeconomic_new" href="#">Exclusive Breastfeeding Rate</a></li>
+		        <li><a id="a_projects" href="#">Vitamin A Supplementation Coverage</a></li>
+		        <li><a id="projects_orgs" href="#">Prevalence of Stunting</a></li>
+		        <li><a id="" href="#">Prevalence of Wasting</a></li>
+		        <li><a id="" href="#">Timely Complementary Feeding Rate</a></li>
 
-</body>
-</html>
+	        </ul>
+	     </div>
+	      <div class="partners">
+	        <div class="partL">
+	          <span class="projectof">A project of:&nbsp;&nbsp;&nbsp;</span><br />
+		     </div>
+		     <div class="partimg">
+		       <a href="http://www.mixmarket.org" target="_blank"><img src="images/logo_mix_bw2.png" alt="MIX" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.developmentseed.org"><img src="images/logo_ds_bw2.png" alt="development seed" /></a>&nbsp;&nbsp;&nbsp;&nbsp;<a target="_blank" href="http://www.mastercardfdn.org"><img src="images/logo_mcf_bw.jpg" alt="mcf" /></a>
+		     </div>
+	      </div>
+	      <div class="tmlink">
+	        powered by open source <a target='_blank' href='http://tilemill.com'>TileMill</a>
+	      </div>
+	  
+</div>​
+	  <div id='map'>
+	  </div><div class=​"wax-legends">​<div class=​"wax-legend" style=​"display:​ none;​ ">​</div>​</div>​</div>​
+
+	  <div id='controls'>
+	    <a href='#' id='bwtoggle' class='hq control active'>HQ</a>
+	    <div id='embed'>
+	      <a href='#' class='embed control'></a>
+	      <div class='tip'>
+	        <div class='inner'>
+	          <input type='textfield' length='20' class='embed' id='embed-code' value='' readonly>
+	          <p>Copy the code above into any blog or web page to embed this view of the map.</p>
+	        </div>
+	        <span class='point'></span>
+	      </div>
+	    </div>
+	  </div>
+	</body>
+	</html>
