@@ -3,42 +3,82 @@
 <head>
 <meta charset=utf-8 />
 <title>1,000 Days Project Map</title>
+<link rel='shortcut icon' href='images/favicon.ico' type='image/x-icon' />
 <link rel='stylesheet' href='css/reset.css' type='text/css' />
 <link rel='stylesheet' href='css/style.css' type='text/css' />
 </head>
 <body>
 
+  <h2 class='title'><span class='inner'>Nutrition Interventions</span></h2>
   <div class='about'>
-    <h2>Nutrition Interventions</h2>
-    <p>View the distribution of organizations and projects working to end undernutrition in the context of stunting and wasting data.</p>
+    <p class='inner'>View the distribution of organizations and projects working to end undernutrition in the context of stunting and wasting data.</p>
 
-    <div class='layerswitch'>
-      <ul class='layers'>
-        <li><a data-layer='djohnson.stunting_brown' href='#'>Prevalence of Stunting</a></li>
-        <li><a data-layer='djohnson.admin_points' href='#'>Prevalence of Wasting</a></li>
-      </ul>
-    </div>
+    <ul class='layers'>
+      <li><a class='active' data-layer='djohnson.wasting_orange' href='#'>Prevalence of Wasting</a></li>
+      <li><a data-layer='djohnson.stunting_orange' href='#'>Prevalence of Stunting</a></li>
+      <li><a data-layer='' href='#'>Data Layer 3</a></li>
+      <li><a data-layer='' href='#'>Data Layer 4</a></li>
+    </ul>
 
     <div class='interventions'>
       <h4>Intervention Types</h4>
-      <div class='types mother'></div>
-      <div class='types vitamins'></div>
-      <div class='types wheat'></div>
+      <div class='type'>
+        <div class='icon mother'>Mother</div>
+        <div class='copy'>
+          <h5>Promote good nutritional practices</h5>
+          <ul>
+            <li>Breastfeeding</li>
+            <li>Complementary feeding</li>
+            <li>Improved hygiene practices</li>
+          </ul>
+        </div>
+      </div>
+      <div class='type vitamins'>
+        <div class='icon vitamins'>Vitamins</div>
+        <div class='copy'>
+          <h5>Increase intake of vitamins and minerals (through fortification and supplements)</h5>
+          <ul>
+            <li>Vitamin A supplements</li>
+            <li>Zinc supplements</li>
+            <li>Micronutrient powders</li>
+            <li>De-worming drugs</li>
+            <li>Iron/folic acid supplements for pregnant women</li>
+            <li>Iodized oil capsules</li>
+            <li>Salt iodization</li>
+            <li>Iron fortification</li>
+            <li>Food fortification/biofortification</li>
+            <li>Prevention/treatment of moderate undernutrition</li>
+          </ul>
+        </div>
+      </div>
+      <div class='type wheat'>
+        <div class='icon wheat'>Wheat</div>
+        <div class='copy'>
+          <h5>Prevent and treat moderate and severe malnutrition</h5>
+          <ul>
+            <li>Treatment of severe undernutrition with RUTF</li>
+            <li>Diet diversification</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 
   <div id='map'></div>
   <div id='controls'>
-    <div id='embed'>
-      <a href='#' class='embed control'></a>
-      <div class='tip'>
-        <div class='inner'>
-          <input type='textfield' length='20' class='embed' id='embed-code' value='' readonly>
-          <p>Copy the code above into any blog or web page to embed this view of the map.</p>
-        </div>
-        <span class='point'></span>
-      </div>
-    </div>
+    <a href='#' class='share'>Share</a>
+  </div>
+
+  <div id='overlay'></div>
+  <div id='share' class='clearfix'>
+    <a href='#' class='close okay' title='Press ESC to close'>X</a>
+    <h3>Share this map</h3>
+    <p>
+      <a id='facebook' target='_blank'>Facebook</a>
+      <a id='twitter' target='_blank'>Twitter</a>
+    </p>
+    <h5>Get the embed code</h5><br><small>Copy and paste this HTML into your website or blog.</small>
+    <div id='embed-code-field'><textarea id='embed-code' rows='4' readonly></textarea></div>
   </div>
 
   <script src='js/ender.min.js'></script>
