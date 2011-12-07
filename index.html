@@ -1,70 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <title>1,000 Days Project Map</title>
-  <link rel="shortcut icon" href="images/mixmarket_favicon.ico" type="image/x-icon" />
-  
-   <script src='scripts/jquery-1.6.1.min.js' type='text/javascript'></script>
-   <script src='scripts/modestmaps.min.js' type='text/javascript'></script>
-   <script src='scripts/wax.mm.min.js' type='text/javascript'></script>
-   <script src='scripts/app.js' type='text/javascript'></script>
-   <link href='css/controls.css' rel='stylesheet' type='text/css'/>
-   <link rel='stylesheet' href='css/reset.css' type='text/css'/>
-   <link rel='stylesheet' href='css/style.css' type='text/css'/>
-   <!--[if IE 7]>
-        <link rel="stylesheet" type="text/css" href="css/ie7.css">
-   <![endif]-->
+<meta charset=utf-8 />
+<title>1,000 Days Project Map</title>
+<link rel='stylesheet' href='css/reset.css' type='text/css' />
+<link rel='stylesheet' href='css/style.css' type='text/css' />
 </head>
-
 <body>
 
-    
-    
-  <div class='about'>
-	<div class='title2'>
-	<h2>Nutrition Interventions</h2>
-	</div>
-      <p>View the distribution of organizations and projects working to end undernutrition in the context of stunting and wasting data.</p>
-	     </p>
-		 <div class="layerswitch">
-			
-	        <ul class="layers">
-		        <li><a id="djohnson.stunting_brown" href="#">Prevalence of Stunting</a></li>
-		        <li><a id="djohnson.admin_points" href="#">Prevalence of Wasting</a></li>
-		      
-	        </ul>
-	     </div>
-	          <div class="interventions-title">Intervention Types</div>
-		  <div class="interventions">
-		     
-		      <div><img src="images/mother.svg"height="60px" width="60px";/></div>
-			      <div><img src="images/vitamins.svg"height="60px" width="60px";/></div>
-			  <div><img src="images/wheat.svg" height="60px" width="60px";/></div>
-		  
-	      </div>
-	      <div class="tmlink">
-	         
-	      </div>
-	  
-</div>​
-	  <div id='map'>
-	  </div><div class=​"wax-legends">​<div class=​"wax-legend" style=​"display:​ none;​ ">​</div>​</div>​</div>​
+<div class='about'>
+  <div class='title2'>
+    <h2>Nutrition Interventions</h2>
+  </div>
+  <p>View the distribution of organizations and projects working to end undernutrition in the context of stunting and wasting data.</p>
 
-	  <div id='controls'>
-	    <a href='#' id='bwtoggle' class='hq control active'>HQ</a>
-	    <div id='embed'>
-	      <a href='#' class='embed control'></a>
-	      <div class='tip'>
-	        <div class='inner'>
-	          <input type='textfield' length='20' class='embed' id='embed-code' value='' readonly>
-	          <p>Copy the code above into any blog or web page to embed this view of the map.</p>
-	        </div>
-	        <span class='point'></span>
-	      </div>
-	    </div>
-	  </div>
-	</body>
-	</html>
+  <div class='layerswitch'>
+    <ul class='layers'>
+      <li><a id='djohnson.stunting_brown' href='#'>Prevalence of Stunting</a></li>
+      <li><a id='djohnson.admin_points' href='#'>Prevalence of Wasting</a></li>
+    </ul>
+  </div>
+
+  <div class='interventions-title'>
+    Intervention Types
+  </div>
+
+  <div class='interventions'>
+    <div><img src='images/mother.svg'height='60px' width='60px';/></div>
+    <div><img src='images/vitamins.svg'height='60px' width='60px';/></div>
+    <div><img src='images/wheat.svg' height='60px' width='60px';/></div>
+  </div>
+
+  <div class='tmlink'></div>
+</div>
+
+<div id='map'></div>
+
+<div id='controls'>
+  <div id='embed'>
+    <a href='#' class='embed control'></a>
+    <div class='tip'>
+      <div class='inner'>
+        <input type='textfield' length='20' class='embed' id='embed-code' value='' readonly>
+        <p>Copy the code above into any blog or web page to embed this view of the map.</p>
+      </div>
+      <span class='point'></span>
+    </div>
+  </div>
+</div>
+
+<script src='js/ender.min.js'></script>
+<script src='js/modestmaps.min.js'></script>
+<script src='js/wax.mm.min.js'></script>
+<script src='js/app.js'></script>
+</body>
+</html>
