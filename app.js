@@ -1,55 +1,57 @@
 var m,
 	legend,
     mm = com.modestmaps,
-    activeData = 'mix-africa-accounts',
-    activeLayer = 'mix-africa-gdp',
-    layers = [
-    	'mapbox.world-blank-bright',
-        'world-urban-areas',
-        activeLayer,
-        'mapbox.world-borders-dark',
-        activeData].join(','),
-    url = 'http://a.tiles.mapbox.com/mix/1.0.0/' + layers + '/layer.json';
+    activeLayer = 'djohnson.stunting_orange',
+    activeData = 'djohnson.country_points2',
+    activeData2= 'djohnson.admin_points',
+    borders = 'mapbox.world-borders-light',
+    baselayer ='mapbox.world-blank-bright',
 
-	function getTiles() { 
-	  return [
-	            "http://a.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.jpg",
-	            "http://b.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.jpg",
-	            "http://c.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.jpg",
-	            "http://d.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.jpg"
-	         ]
-	};
-	
-	function getGrids() { 
-	  return [
-	            "http://a.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json",
-	            "http://b.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json",
-	            "http://c.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json",
-	            "http://d.tiles.mapbox.com/mix/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json"
-	         ]
-	};
-	
+   
+ 
+ layers = [baselayer, activeLayer, borders,activeData, activeData2
+        ].join(','),
+  	    url = 'http://a.tiles.mapbox.com/v1/' + layers + '.jsonp';
+
+		function getTiles() { 
+		  return [
+		            "http://a.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.jpg",
+		            "http://b.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.jpg",
+		            "http://c.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.jpg",
+		            "http://d.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.jpg"
+		         ]
+		};
+
+		function getGrids() { 
+		  return [
+		        "http://a.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.grid.json",
+	            "http://b.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.grid.json",
+	            "http://c.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.grid.json",
+	            "http://d.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.grid.json"
+		         ]
+		};
+
 	function refreshMap() {
-		url = 'http://a.tiles.mapbox.com/mix/1.0.0/' + layers + '/layer.json';
+	 url = 'http://a.tiles.mapbox.com/v1/' + layers + '.jsonp';
   		wax.tilejson(url, function(tilejson) {
-  			tilejson.minzoom = 4;
-	      	tilejson.maxzoom = 6;
+	        
+  			tilejson.minzoom = 2;
+	      	tilejson.maxzoom = 7;
 	      	tilejson.tiles = getTiles();
 	      	tilejson.grids = getGrids();
-	      	m.setProvider(new wax.mm.connector(tilejson));
-		    $('.wax-legends').remove(); 
-		    legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
-		    interaction.remove();
-		    interaction = wax.mm.interaction(m, tilejson);
-		});
-	}
-	
+	      	m.setProvider(new wax.mm.connector(tilejson));file:///Users/howardthethird/Desktop/javascript%20test/thousand_days/index_new.html#
+		  	 $('.wax-legends').remove(); 
+			    legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
+			    interaction.remove();
+			    interaction = wax.mm.interaction(m, tilejson);
+			});
+		}
 	$(function (){
 		//build map
-		$('a#mix-africa-gdp').addClass('active');
+		$('baselayer').addClass('active');
 	    wax.tilejson(url, function(tilejson) {
-	      tilejson.minzoom = 4;
-	      tilejson.maxzoom = 6;
+	      tilejson.minzoom = 2;
+	      tilejson.maxzoom = 7;
 	      tilejson.tiles = getTiles();
 	      tilejson.grids = getGrids();
 	      
@@ -66,7 +68,8 @@ var m,
 	      legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
 	      wax.mm.zoombox(m, tilejson);
 	      
-	      m.setCenterZoom(new mm.Location(5, 33), 4);
+	      m.setCenterZoom(new mm.Location( 5
+		, 15), 3);
 	      
 	      // Bandwidth detection control and switch element
 		  var detector = wax.mm.bwdetect(m, {
@@ -92,27 +95,18 @@ var m,
 	    	activeLayer = this.id;
 	    	$('.layers li a').removeClass('active');
       		$(this).addClass('active');
-	    	layers = [
-            	'mapbox.world-blank-bright',
-		        'world-urban-areas',
-		        activeLayer,
-		        'mapbox.world-borders-dark',
-		        activeData
-            ].join(',');
+	    	layers = [baselayer, activeLayer, borders,activeData, activeData2
+			        ].join(','),
+			  	    url = 'http://a.tiles.mapbox.com/v1/' + layers + '.jsonp';
             
             refreshMap();
         });
         
         //point data selector
         $('#data-select').change(function() {
-        	activeData = $('#data-select option:selected')[0].id;
-        	layers = [
-            	'mapbox.world-blank-bright',
-		        'world-urban-areas',
-		        activeLayer,
-		        'mapbox.world-borders-dark',
-		        activeData
-            ].join(',');
+        	activeLayer = $('#data-select option:selected')[0].id;
+        	layers = [baselayer, activeLayer, borders,activeData, activeData2
+			        ].join(','),
             
             refreshMap();
         });
