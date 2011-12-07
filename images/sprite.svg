@@ -11,12 +11,15 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="60"
+   width="50"
    height="200"
    id="svg2"
    version="1.1"
    inkscape:version="0.48.0 r9654"
-   sodipodi:docname="sprite.svg">
+   sodipodi:docname="sprite.svg"
+   inkscape:export-filename="/Users/tristen/devseed/1000days/images/sprite.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <defs
      id="defs4">
     <linearGradient
@@ -1085,9 +1088,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="24.477067"
-     inkscape:cy="38.382808"
+     inkscape:zoom="3.959798"
+     inkscape:cx="20.941533"
+     inkscape:cy="48.484333"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1122,7 +1125,6 @@
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="base"
-     sodipodi:insensitive="true"
      style="display:none">
     <rect
        style="color:#000000;fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.94959116;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -1133,6 +1135,15 @@
        y="0"
        rx="3.4323796e-06"
        ry="3.4323798e-06" />
+    <rect
+       style="color:#000000;fill:#666666;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.94959116;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect5247"
+       width="20"
+       height="20"
+       x="0"
+       y="165"
+       rx="3.4323796e-06"
+       ry="3.4323798e-06" />
   </g>
   <g
      inkscape:label="Layer 1"
@@ -1140,7 +1151,7 @@
      id="layer1"
      transform="translate(0,-852.36218)">
     <g
-       transform="matrix(1.5,0,0,1.5,-0.3813615,-601.18112)"
+       transform="matrix(1.25,0,0,1.25,-0.31780125,-358.09057)"
        id="layer1-9"
        inkscape:label="Layer 1">
       <path
@@ -1191,7 +1202,7 @@
          sodipodi:cy="15"
          sodipodi:cx="20"
          id="path6648"
-         style="fill:#f6f8f8;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient6672);stroke-width:0.5209955"
+         style="fill:#f6f8f8;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient6672);stroke-width:0.62519461"
          sodipodi:type="arc" />
       <path
          sodipodi:nodetypes="ccccccccccccccccccccccccccccccccc"
@@ -1223,11 +1234,11 @@
          sodipodi:cy="22.711636"
          sodipodi:cx="16.970562"
          id="path6714"
-         style="fill:none;stroke:url(#linearGradient6722);stroke-width:0.66666669"
+         style="fill:none;stroke:url(#linearGradient6722);stroke-width:0.80000001"
          sodipodi:type="arc" />
     </g>
     <g
-       transform="matrix(1.5120503,0,0,1.5221346,-128.67242,-759.25026)"
+       transform="matrix(1.2600419,0,0,1.2684455,-107.22702,-488.98156)"
        id="g3048">
       <g
          id="layer1-0"
@@ -1247,7 +1258,7 @@
              transform="matrix(2.5869723,0,0,3.8261917,521.67039,4190.1737)" />
           <path
              inkscape:connector-curvature="0"
-             style="fill:url(#linearGradient3877);fill-opacity:1;stroke:url(#linearGradient3879);stroke-width:1.68291354;stroke-miterlimit:4;stroke-dasharray:none"
+             style="fill:url(#linearGradient3877);fill-opacity:1;stroke:url(#linearGradient3879);stroke-width:2.0194962;stroke-miterlimit:4;stroke-dasharray:none"
              id="path3872"
              d="m 323.15817,2210.299 a 56.550935,56.586584 0 0 1 -113.10187,0 56.550935,56.586584 0 1 1 113.10187,0 z" />
           <path
@@ -1266,7 +1277,7 @@
       </g>
     </g>
     <g
-       transform="matrix(1.5388447,0,0,1.5512048,-1.1177792,-718.63862)"
+       transform="matrix(1.2823706,0,0,1.2926707,-0.93148265,-456.80514)"
        id="layer1-4"
        inkscape:label="Layer 1">
       <g
@@ -1284,7 +1295,7 @@
            transform="matrix(1.0080321,0,0,1.1554525,-28.218978,1011.9689)" />
         <path
            sodipodi:type="arc"
-           style="fill:url(#linearGradient3803);fill-opacity:1;stroke:url(#linearGradient5090);stroke-width:0.59018886;stroke-miterlimit:4;stroke-dasharray:none"
+           style="fill:url(#linearGradient3803);fill-opacity:1;stroke:url(#linearGradient5090);stroke-width:0.70822662;stroke-miterlimit:4;stroke-dasharray:none"
            id="path4900"
            sodipodi:cx="9.1606369"
            sodipodi:cy="21.678726"
@@ -1308,6 +1319,21 @@
            x="-21.997839"
            y="1028.7246" />
       </g>
+    </g>
+    <g
+       id="g4065"
+       transform="matrix(0.70710678,0.70710679,-0.70710679,0.70710678,400.57905,-52.646006)"
+       style="fill:#404040;fill-opacity:1;display:inline">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4055"
+         d="m 486.50003,1032.3622 1.99998,0 0,15 -1.99998,0 z"
+         style="fill:#404040;fill-opacity:1;stroke:none" />
+      <path
+         style="fill:#404040;fill-opacity:1;stroke:none"
+         d="m 495.00007,1038.8621 -2e-5,2.0001 -15.00008,10e-5 2e-5,-2.0001 z"
+         id="path4057"
+         inkscape:connector-curvature="0" />
     </g>
   </g>
 </svg>

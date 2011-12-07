@@ -12,13 +12,13 @@ html,body {
   Typography
 -------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
+  color: #4d3936;
   margin: 0;
   font-weight: normal;
   }
 h2 {
   font-size: 20px;
   font-weight: bold;
-  color: #DA8645;
   }
 h4 {
   font-size: 18px;
@@ -29,7 +29,7 @@ h5 {
   line-height: 18px;
   }
 a {
-  color: #222;
+  color: #4d3936;
   font-weight: bold;
   text-decoration: none;
   }
@@ -38,6 +38,18 @@ input[type='textfield'] {
   -moz-box-shadow: inset 0px 0px 3px #ccc;
   -webkit-box-shadow: inset 0px 0px 3px #ccc;
   box-shadow: inset 0px 0px 3px #ccc;
+  }
+a.close {
+  background: #eee url(images/sprite.png) -23px -353px;
+  display: block;
+  text-indent: -999em;
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 100;
   }
 
 ::-webkit-scrollbar {
@@ -52,7 +64,7 @@ input[type='textfield'] {
   background: #ccc;
   }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3c1108;
+  background: #4d3936;
   }
 ::-webkit-scrollbar-thumb:vertical    { height: 25px; }
 ::-webkit-scrollbar-thumb:horizontal  { width: 25px;  }
@@ -116,16 +128,16 @@ ul.layers li a {
     float: left;
     }
   .interventions .copy {
-    padding-left: 70px;
+    padding-left: 60px;
     }
 .icon {
   background: transparent url(../images/sprite.png) no-repeat 0 0;
   text-indent: -999em;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   }
-  .icon.mother    { background-position: 0 -65px; }
-  .icon.vitamins  { background-position: 0 -130px; }
+  .icon.mother    { background-position: 0 -55px; }
+  .icon.vitamins  { background-position: 0 -110px; }
 
 /*-----------------------------------
   Map
