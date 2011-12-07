@@ -2,13 +2,15 @@ var m;
 var mm = com.modestmaps;
 var baselayer = 'mapbox.world-blank-bright';
 var borders = 'mapbox.world-borders-light';
-var pointLayer = 'djohnson.country-admin-projects';
+var nationalPointData = 'djohnson.admin-projects';
+var subNationalPointData = 'djohnson.country-projects';
 var activeLayer = 'djohnson.wasting_orange';
 var layers = [
     baselayer,
     activeLayer,
     borders,
-    pointLayer
+    nationalPointData,
+    subNationalPointData
     ];
 
 wax.tilejson('http://api.tiles.mapbox.com/v2/' + layers + '.jsonp', function(tilejson) {
@@ -58,7 +60,8 @@ $(document).ready(function () {
                 baselayer,
                 activeLayer,
                 borders,
-                pointLayer
+                nationalPointData,
+                subNationalPointData
             ];
             refreshMap(layers);
         }
