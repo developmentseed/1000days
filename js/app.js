@@ -2,11 +2,13 @@ var m;
 var mm = com.modestmaps;
 var baselayer = 'mapbox.world-blank-bright';
 var borders = 'mapbox.world-borders-light';
+var pointLayer = 'djohnson.country-admin-projects';
 var activeLayer = 'djohnson.wasting_orange';
 var layers = [
     baselayer,
     activeLayer,
-    borders
+    borders,
+    pointLayer
     ];
 
 wax.tilejson('http://api.tiles.mapbox.com/v2/' + layers + '.jsonp', function(tilejson) {
@@ -18,7 +20,7 @@ wax.tilejson('http://api.tiles.mapbox.com/v2/' + layers + '.jsonp', function(til
     m.setCenterZoom(new mm.Location(-0.24,-5.36), 3);
     tilejson.attribution = 'Powered by open source <a href="http://tilemill.com" target="_blank"> TileMill</a> ';
     var interaction = wax.mm.interaction(m, tilejson);
-
+    var legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
     wax.mm.attribution(m, tilejson).appendTo(m.parent);
     wax.mm.zoomer(m, tilejson).appendTo($('#controls')[0]);
     var bw = wax.mm.bwdetect(m, {
@@ -36,7 +38,7 @@ function refreshMap(layers) {
             return interactiveFormatter[o.format](d);
         };
         $('.wax-legends').remove();
-        var legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
+        legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
         if (typeof interaction === 'object') { interaction.remove(); }
         interaction = wax.mm.interaction(m, tilejson);
     });
@@ -55,7 +57,8 @@ $(document).ready(function () {
             layers = [
                 baselayer,
                 activeLayer,
-                borders
+                borders,
+                pointLayer
             ];
             refreshMap(layers);
         }
