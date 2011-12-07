@@ -11,8 +11,6 @@ var baselayer ='mapbox.world-blank-bright';
 $(document).ready(function () {
     $('a.share').click(function(e){
         e.preventDefault();
-        $('#small-drawer .drawer-content').html(MA.template.share());
-        $('#small-drawer, #overlay').addClass('active');
 
         var shareContent = $('.share-content');
         var twitter = 'http://twitter.com/intent/tweet?status=' +

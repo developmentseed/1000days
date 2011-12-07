@@ -8,50 +8,42 @@
 </head>
 <body>
 
-<div class='about'>
-  <div class='title2'>
+  <div class='about'>
     <h2>Nutrition Interventions</h2>
-  </div>
-  <p>View the distribution of organizations and projects working to end undernutrition in the context of stunting and wasting data.</p>
+    <p>View the distribution of organizations and projects working to end undernutrition in the context of stunting and wasting data.</p>
 
-  <div class='layerswitch'>
-    <ul class='layers'>
-      <li><a id='djohnson.stunting_brown' href='#'>Prevalence of Stunting</a></li>
-      <li><a id='djohnson.admin_points' href='#'>Prevalence of Wasting</a></li>
-    </ul>
-  </div>
+    <div class='layerswitch'>
+      <ul class='layers'>
+        <li><a data-layer='djohnson.stunting_brown' href='#'>Prevalence of Stunting</a></li>
+        <li><a data-layer='djohnson.admin_points' href='#'>Prevalence of Wasting</a></li>
+      </ul>
+    </div>
 
-  <div class='interventions-title'>
-    Intervention Types
-  </div>
-
-  <div class='interventions'>
-    <div><img src='images/mother.svg'height='60px' width='60px';/></div>
-    <div><img src='images/vitamins.svg'height='60px' width='60px';/></div>
-    <div><img src='images/wheat.svg' height='60px' width='60px';/></div>
-  </div>
-
-  <div class='tmlink'></div>
-</div>
-
-<div id='map'></div>
-
-<div id='controls'>
-  <div id='embed'>
-    <a href='#' class='embed control'></a>
-    <div class='tip'>
-      <div class='inner'>
-        <input type='textfield' length='20' class='embed' id='embed-code' value='' readonly>
-        <p>Copy the code above into any blog or web page to embed this view of the map.</p>
-      </div>
-      <span class='point'></span>
+    <div class='interventions'>
+      <h4>Intervention Types</h4>
+      <div class='types mother'></div>
+      <div class='types vitamins'></div>
+      <div class='types wheat'></div>
     </div>
   </div>
-</div>
 
-<script src='js/ender.min.js'></script>
-<script src='js/modestmaps.min.js'></script>
-<script src='js/wax.mm.min.js'></script>
-<script src='js/app.js'></script>
+  <div id='map'></div>
+  <div id='controls'>
+    <div id='embed'>
+      <a href='#' class='embed control'></a>
+      <div class='tip'>
+        <div class='inner'>
+          <input type='textfield' length='20' class='embed' id='embed-code' value='' readonly>
+          <p>Copy the code above into any blog or web page to embed this view of the map.</p>
+        </div>
+        <span class='point'></span>
+      </div>
+    </div>
+  </div>
+
+  <script src='js/ender.min.js'></script>
+  <script src='js/modestmaps.min.js'></script>
+  <script src='js/wax.mm.min.js'></script>
+  <script src='js/app.js'></script>
 </body>
 </html>

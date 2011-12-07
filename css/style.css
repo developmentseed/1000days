@@ -43,7 +43,7 @@ input[type='textfield'] {
 ::-webkit-scrollbar-thumb:horizontal  { width: 25px;  }
 
 /*-----------------------------------
-  Layout
+  About Section
 -------------------------------------*/
 .about {
   position: fixed;
@@ -58,44 +58,6 @@ input[type='textfield'] {
   z-index:1;
   overflow: hidden;
   opacity: .85;
-  }
-
-  .title2 {
-    border-bottom:2px solid #573415;
-    padding-left: 8px;
-    padding-top: 5px;
-    font-size: 100%;
-    background: #FFF;
-    }
-    .about p {
-      line-height: 1em;
-      width: 260px!important;
-      padding-left: 10px;
-      padding-top: 5px;
-      margin-right: 5px;
-      font-size: 90%;
-      line-height: 15px;
-      font-weight: 580;
-      background: #EDEEE8;
-      }
-    .about p a:hover {
-      text-decoration: underline;
-      }
-
-.interventions-title {
-  position: fixed;
-  bottom: 10px;
-  left: 0px;
-  height: 242px;
-  width: 260px!important;
-  text-align: left;
-  padding-top: 10px;
-  padding-left: 10px;
-  font-size: 18px;
-  font-weight: 680;
-  font-color: #550f0f!important;
-  background: #EDEEE8;
-  border-top: 6px solid #573415 ;
   }
 .interventions {
   position: fixed;
@@ -114,14 +76,17 @@ input[type='textfield'] {
   border-left: 2px solid #ccc;
   }
 
+/*-----------------------------------
+  Map
+-------------------------------------*/
 #map {
-  position: fixed!important;
-  height: 100%!important;
+  background: #e1ecee;
+  position: absolute;
+  height: 100%;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: #e1ecee;
   }
 
 /*Zoom controls*/
@@ -167,16 +132,16 @@ input[type='textfield'] {
  * Interaction
  */
 .wax-tooltip {
-  postition:fixed !important;
-  max-width: 275px !important;
-  top:80px !important;
+  postition: fixed;
+  max-width: 275px;
+  top: 80px;
   background-color: #fff;
-  right:0px !important;
-  box:shadow::#999 2px 2px 5px !important;
-  -moz-box-shadow:#999 2px 2px 5px  !important;
-  -webkit-box-shadow:#999 2px 2px 5px  !important;
+  right: 0px;
+  box:shadow:: #999 2px 2px 5px;
+  -moz-box-shadow: #999 2px 2px 5px;
+  -webkit-box-shadow: #999 2px 2px 5px;
   }
-  
+
 /*Embed Code*/
 #embed {
   position: absolute;
