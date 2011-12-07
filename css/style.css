@@ -58,6 +58,53 @@ a.close {
   z-index: 100;
   }
 
+  ::-webkit-scrollbar {
+    height: 8px;
+    width: 5px;
+    background: #fff;
+    }
+  ::-webkit-scrollbar:hover {
+    background: #fff;
+    }
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+    }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3c1108;
+    }
+  ::-webkit-scrollbar-thumb:vertical    { height: 25px; }
+  ::-webkit-scrollbar-thumb:horizontal  { width: 25px; }
+
+/*-----------------------------------
+  Data Table: For the project popup.
+-------------------------------------*/
+table {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0;
+  border-collapse: separate;
+  *border-collapse: collapse;
+  /* IE7, collapse table to remove spacing */
+  font-size: 13px;
+  }
+table th, table td {
+  padding: 10px 10px 9px 0;
+  line-height: 18px;
+  text-align: left;
+  }
+table th {
+  padding-top: 9px;
+  font-weight: bold;
+  vertical-align: middle;
+  }
+table td {
+  vertical-align: top;
+  border-top: 1px solid #404040;
+  }
+table tr + tr td {
+  border-top: 1px solid #404040;
+  }
+
 /*-----------------------------------
   About Section
 -------------------------------------*/
@@ -223,14 +270,21 @@ ul.layers li a {
 
 /* Interaction */
 .wax-tooltip {
-  postition: fixed;
-  max-width: 275px;
-  top: 80px;
-  background-color: #fff;
-  right: 0px;
-  box:shadow:: #999 2px 2px 5px;
-  -moz-box-shadow: #999 2px 2px 5px;
-  -webkit-box-shadow: #999 2px 2px 5px;
+  background: white;
+  border: 1px solid #7A7979;
+  -moz-box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+  box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+  width: 340px;
+  height: 320px;
+  height: auto!important;
+  max-height: 320px;
+  overflow: auto;
+  padding: 10px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  z-index: 500;
   }
 
 /* Legend */
@@ -274,6 +328,26 @@ ul.layers li a {
     clear: both;
     text-align: left;
     }
+
+/*CSS Animations*/
+.map-tile-loaded {
+  -webkit-animation-name: 'fade-in';
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: .3s;
+  }
+.wax-tooltip {
+  -webkit-animation-name: 'fade-in';
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: .1s;
+  }
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+    }
+  to {
+    opacity: 1;
+    }
+  }
 
 /* Embed Code */
 #overlay {
