@@ -1,38 +1,42 @@
 var m,
 	legend,
     mm = com.modestmaps,
- activeLayer = 'projects_orgs',
-    activeData = 'a_socioeconomic_new',
+    activeLayer = 'djohnson.stunting_orange',
+    activeData = 'djohnson.country_points2',
+    activeData2= 'djohnson.admin_points',
+    borders = 'mapbox.world-borders-light',
+    baselayer ='mapbox.world-blank-bright',
+
+   
  
- layers = [activeData,
-        activeLayer 
+ layers = [baselayer, activeLayer, borders,activeData, activeData2
         ].join(','),
-  	    url = 'http://a.tiles.mapbox.com/djohnson/1.0.0/' + layers + '/layer.json';
+  	    url = 'http://a.tiles.mapbox.com/v1/' + layers + '.jsonp';
 
 		function getTiles() { 
 		  return [
-		            "http://a.tiles.mapbox.com/djohnson/1.0.0/"+layers+"/{z}/{x}/{y}.jpg",
-		            "http://b.tiles.mapbox.com/djohnson/1.0.0/"+layers+"/{z}/{x}/{y}.jpg",
-		            "http://c.tiles.mapbox.com/djohnson/1.0.0/"+layers+"/{z}/{x}/{y}.jpg",
-		            "http://d.tiles.mapbox.com/djohnson/1.0.0/"+layers+"/{z}/{x}/{y}.jpg"
+		            "http://a.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.jpg",
+		            "http://b.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.jpg",
+		            "http://c.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.jpg",
+		            "http://d.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.jpg"
 		         ]
 		};
 
 		function getGrids() { 
 		  return [
-		            "http://a.tiles.mapbox.com/djohnson/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json",
-		            "http://b.tiles.mapbox.com/djohnson/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json",
-		            "http://c.tiles.mapbox.com/djohnson/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json",
-		            "http://d.tiles.mapbox.com/djohnson/1.0.0/"+layers+"/{z}/{x}/{y}.grid.json"
+		        "http://a.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.grid.json",
+	            "http://b.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.grid.json",
+	            "http://c.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.grid.json",
+	            "http://d.tiles.mapbox.com/v1/"+layers+"/{z}/{x}/{y}.grid.json"
 		         ]
 		};
 
 	function refreshMap() {
-		url = 'http://a.tiles.mapbox.com/djohnson/1.0.0/' + layers + '/layer.json';
+	 url = 'http://a.tiles.mapbox.com/v1/' + layers + '.jsonp';
   		wax.tilejson(url, function(tilejson) {
 	        
   			tilejson.minzoom = 2;
-	      	tilejson.maxzoom = 5;
+	      	tilejson.maxzoom = 7;
 	      	tilejson.tiles = getTiles();
 	      	tilejson.grids = getGrids();
 	      	m.setProvider(new wax.mm.connector(tilejson));file:///Users/howardthethird/Desktop/javascript%20test/thousand_days/index_new.html#
@@ -44,10 +48,10 @@ var m,
 		}
 	$(function (){
 		//build map
-		$('a#a_socioeconomic_new').addClass('active');
+		$('baselayer').addClass('active');
 	    wax.tilejson(url, function(tilejson) {
 	      tilejson.minzoom = 2;
-	      tilejson.maxzoom = 5;
+	      tilejson.maxzoom = 7;
 	      tilejson.tiles = getTiles();
 	      tilejson.grids = getGrids();
 	      
@@ -91,10 +95,9 @@ var m,
 	    	activeLayer = this.id;
 	    	$('.layers li a').removeClass('active');
       		$(this).addClass('active');
-	    	layers = [ activeData,
-		        activeLayer
-		       
-            ].join(',');
+	    	layers = [baselayer, activeLayer, borders,activeData, activeData2
+			        ].join(','),
+			  	    url = 'http://a.tiles.mapbox.com/v1/' + layers + '.jsonp';
             
             refreshMap();
         });
@@ -102,10 +105,8 @@ var m,
         //point data selector
         $('#data-select').change(function() {
         	activeLayer = $('#data-select option:selected')[0].id;
-        	layers = [ activeData,
-		        activeLayer
-		       
-            ].join(',');
+        	layers = [baselayer, activeLayer, borders,activeData, activeData2
+			        ].join(','),
             
             refreshMap();
         });
