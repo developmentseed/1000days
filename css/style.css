@@ -79,13 +79,6 @@ a.close {
   ::-webkit-scrollbar-thumb:vertical    { height: 25px; }
   ::-webkit-scrollbar-thumb:horizontal  { width: 25px; }
 
-.interventions ul {
-  margin-left: 30px;
-  }
-.interventions ul li {
-  list-style: disc;
-  }
-
 /*-----------------------------------
   Data Table: For the project popup.
 -------------------------------------*/
@@ -172,14 +165,22 @@ ul.layers li a {
 .interventions {
   padding: 20px;
   }
+  .interventions h5 {
+    padding-top: 5px;
+    }
+  .interventions ul {
+    clear: left;
+    margin-left: 20px;
+    }
+  .interventions ul li {
+    list-style: disc;
+    }
   .interventions .type {
     margin: 10px 0;
     }
   .interventions .icon {
     float: left;
-    }
-  .interventions .copy {
-    padding-left: 60px;
+    margin: 0 10px 10px 0;
     }
 .icon {
   background: transparent url(../images/sprite.png) no-repeat 0 0;

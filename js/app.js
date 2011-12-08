@@ -5,12 +5,13 @@ var borders = 'mapbox.world-bank-borders-en';
 var nationalPointData = 'djohnson.admin-projects';
 var subNationalPointData = 'djohnson.country-projects';
 var activeLayer = 'djohnson.wasting_orange';
+var interaction, legend;
 var layers = [
-    baselayer,
-    activeLayer,
-    borders,
-    nationalPointData,
-    subNationalPointData
+        baselayer,
+        activeLayer,
+        borders,
+        nationalPointData,
+        subNationalPointData
     ];
 
 wax.tilejson('http://api.tiles.mapbox.com/v2/' + layers + '.jsonp', function(tilejson) {
@@ -21,8 +22,8 @@ wax.tilejson('http://api.tiles.mapbox.com/v2/' + layers + '.jsonp', function(til
     );
     m.setCenterZoom(new mm.Location(-0.24,-5.36), 3);
     tilejson.attribution = 'Powered by open source <a href="http://tilemill.com" target="_blank"> TileMill</a> ';
-    var interaction = wax.mm.interaction(m, tilejson);
-    var legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
+    interaction = wax.mm.interaction(m, tilejson);
+    legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
     wax.mm.attribution(m, tilejson).appendTo(m.parent);
     wax.mm.zoomer(m, tilejson).appendTo($('#controls')[0]);
     var bw = wax.mm.bwdetect(m, {
@@ -36,12 +37,9 @@ function refreshMap(layers) {
         tilejson.minzoom = 2;
         tilejson.maxzoom = 6;
         m.setProvider(new wax.mm.connector(tilejson));
-        tilejson.formatter = function(o, d) {
-            return interactiveFormatter[o.format](d);
-        };
         $('.wax-legends').remove();
         legend = wax.mm.legend(m, tilejson).appendTo(m.parent);
-        if (typeof interaction === 'object') { interaction.remove(); }
+        interaction.remove();
         interaction = wax.mm.interaction(m, tilejson);
     });
 }
