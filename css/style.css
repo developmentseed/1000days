@@ -64,7 +64,7 @@ a.close {
 
   ::-webkit-scrollbar {
     height: 8px;
-    width: 5px;
+    width: 10px;
     background: #fff;
     }
   ::-webkit-scrollbar:hover {
@@ -135,8 +135,11 @@ h2.title {
   background: #eee;
   background: rgba(238,238,238, 0.90);
   z-index: 100;
-  overflow: auto;
+  overflow: hidden;
   }
+  .about:hover {
+    overflow: auto;
+    }
   .about .inner {
     margin-top: 50px;
     }
