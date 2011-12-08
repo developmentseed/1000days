@@ -298,7 +298,7 @@ ul.layers li a {
   top: 10px;
   right: 10px;
   position: absolute;
-  z-index: 500;
+  z-index: 600;
   }
 
 /* Legend */

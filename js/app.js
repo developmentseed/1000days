@@ -1,7 +1,7 @@
 var m;
 var mm = com.modestmaps;
 var baselayer = 'mapbox.world-blank-bright';
-var borders = 'mapbox.world-borders-light';
+var borders = 'mapbox.world-bank-borders-en';
 var nationalPointData = 'djohnson.admin-projects';
 var subNationalPointData = 'djohnson.country-projects';
 var activeLayer = 'djohnson.wasting_orange';
