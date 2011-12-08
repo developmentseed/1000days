@@ -79,6 +79,13 @@ a.close {
   ::-webkit-scrollbar-thumb:vertical    { height: 25px; }
   ::-webkit-scrollbar-thumb:horizontal  { width: 25px; }
 
+.interventions ul {
+  margin-left: 30px;
+  }
+.interventions ul li {
+  list-style: disc;
+  }
+
 /*-----------------------------------
   Data Table: For the project popup.
 -------------------------------------*/
