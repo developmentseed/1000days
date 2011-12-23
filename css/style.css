@@ -17,7 +17,7 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
   }
 h2 {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: bold;
   margin: 10px 0;
   }
@@ -121,16 +121,17 @@ h2.title {
   position: fixed;
   top: 0;
   left: 0;
-  width: 35%;
+  width: 32%;
   z-index: 200;
-  padding: 20px 0 10px;
+  padding: 16px 0 10px;
   margin: 0;
+  border-bottom: 2px solid #4d3936;;
   }
 .about {
   position: absolute;
   top: 0;
   left: 0;
-  width: 35%;
+  width: 32%;
   height: 100%;
   background: #eee;
   background: rgba(238,238,238, 0.90);
@@ -166,7 +167,7 @@ ul.layers li a {
   padding: 20px;
   }
   .interventions h5 {
-    padding-top: 5px;
+    padding-top: 9px;
     }
   .interventions ul {
     clear: left;
@@ -322,7 +323,7 @@ ul.layers li a {
     margin: 0;
     }
   body .wax-legend ul.labels li span {
-    height: 10px;
+    height: 14px;
     width: 45px;
     }
   body .wax-legend .scale ul li {
