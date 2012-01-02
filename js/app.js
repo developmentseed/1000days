@@ -19,7 +19,7 @@ wax.tilejson('http://api.tiles.mapbox.com/v2/' + layers + '.jsonp', function(til
         new mm.TouchHandler()
         ]
     );
-    m.setCenterZoom(new mm.Location(-0.24,-5.36), 3);
+    m.setCenterZoom(new mm.Location(9,12), 3);
     tilejson.attribution = 'Powered by open source <a href="http://tilemill.com" target="_blank"> TileMill</a> ';
     wax.mm.legend(m, tilejson).appendTo(m.parent);
     wax.mm.interaction(m, tilejson);
