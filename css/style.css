@@ -292,14 +292,20 @@ ul.layers li a {
   z-index: 600;
   }
   .wax-tooltip em{
-    font-size: 13px;
+    font-size: 12px;
     }
   .wax-tooltip h6{
     line-height: 16px;
     font-size: 14px;
     }
-    .wax-tooltip strong{
-        font-size: 15px;
+  .wax-tooltip strong{
+    font-size: 15px;
+    }
+  .wax-tooltip th{
+    font-size: 12px;
+    }
+    .wax-tooltip tbody{
+        font-size: 11px;
         }
 
 /* Legend */
