@@ -3,7 +3,7 @@ var mm = com.modestmaps;
 var baselayer = 'mapbox.world-blank-bright';
 var borders = 'mapbox.world-bank-borders-en';
 var nationalPointData = '1000-days.projects-country';
-var subNationalPointData = '1000-days.subnational_projects';
+var subNationalPointData = '1000-days.projects-subnational';
 var activeLayer = '1000-days.global-birthweight';
 var layers = [
         baselayer,

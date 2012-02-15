@@ -211,7 +211,7 @@ ul.layers li a {
 #controls {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 33%;
   background: white;
   border: 1px solid #7A7979;
   -moz-box-shadow: 0 0 6px rgba(0, 0, 0, .3);
@@ -271,19 +271,6 @@ ul.layers li a {
         cursor: default;
         }
 
-/* Attribution */
-.wax-attribution {
-  position: absolute;
-  z-index: 10;
-  bottom: 5px;
-  right: 10px;
-  line-height: 20px;
-  font-size: 11px;
-  }
-  .wax-attribution a {
-    border-bottom: 1px solid #404040;
-    color: #404040;
-    }
 
 /* Interaction */
 .wax-tooltip {
@@ -300,7 +287,7 @@ ul.layers li a {
   overflow: auto;
   padding: 10px;
   top: 10px;
-  left: 33%;
+  right:10px;
   position: absolute;
   z-index: 600;
   }
@@ -328,7 +315,7 @@ ul.layers li a {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
   box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
   right: 10px;
-  bottom: 30px;
+  bottom: 10px;
   padding: 10px;
   }
   /* Overrides to the legend coming from hosting */
