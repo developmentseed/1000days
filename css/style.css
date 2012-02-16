@@ -113,7 +113,10 @@ table tr + tr td {
   About Section
 -------------------------------------*/
 .inner {
-  padding: 2px 14px;
+  padding: 2px 14px 10px;
+  }
+.inner em {
+  font-size: 12px;
   }
 h2.title {
   display: block;
@@ -145,7 +148,7 @@ h2.title {
     }
   .about .inner {
     margin-top: 50px;
-    }
+    }  
 
 /* Layer switching */
 ul.layers li a {
