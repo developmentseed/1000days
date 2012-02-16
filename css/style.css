@@ -281,6 +281,7 @@ ul.layers li a {
   -moz-box-shadow: 0 0 6px rgba(0, 0, 0, .3);
   -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, .3);
   box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+  -webkit-user-select:auto;
   width: 340px;
   height: 320px;
   height: auto!important;
