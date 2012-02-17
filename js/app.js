@@ -4,7 +4,7 @@ var baselayer = 'mapbox.world-blank-bright';
 var borders = 'mapbox.world-bank-borders-en';
 var nationalPointData = '1000-days.projects-country';
 var subNationalPointData = '1000-days.projects-subnational';
-var activeLayer = '1000-days.global-birthweight';
+var activeLayer = '1000-days.global-stunting';
 var layers = [
         baselayer,
         activeLayer,
